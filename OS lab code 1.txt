@@ -1,0 +1,176 @@
+[root@localhost ~]# ls
+Lab2     dos      f1       f2       f3       f4       hello.c
+[root@localhost ~]# cd Lab2
+[root@localhost Lab2]# pwd
+/root/Lab2
+[root@localhost Lab2]# ls
+[root@localhost Lab2]# cat > file1
+This is OS Lab.
+[root@localhost Lab2]# cat > file2
+This is OS Theory.
+[root@localhost Lab2]# touch file3 file4
+[root@localhost Lab2]# ls
+file1  file2  file3  file4
+[root@localhost Lab2]# cat file1
+[root@localhost Lab2]# ls
+file1  file2  file3  file4
+[root@localhost Lab2]# mkdir Dir1 Dir2 Dir3
+[root@localhost Lab2]# ls
+Dir1   Dir2   Dir3   file1  file2  file3  file4
+[root@localhost Lab2]# cp file1 Dir1
+[root@localhost Lab2]# ls
+Dir1   Dir2   Dir3   file1  file2  file3  file4
+[root@localhost Lab2]# ls Dir1
+file1
+[root@localhost Lab2]# cp file2 Dir2
+[root@localhost Lab2]# ls Dir2
+file2
+[root@localhost Lab2]# cp file2 Dir2
+[root@localhost Lab2]# ls Dir2
+file2
+[root@localhost Lab2]# cp file2 Dir1
+[root@localhost Lab2]# ls Dir1
+file1  file2
+[root@localhost Lab2]# rm Dir1/file2
+[root@localhost Lab2]# ls Dir1
+file1
+[root@localhost Lab2]# mkdir Dir1 Dir2 Dir3
+[root@localhost Lab2]# ls
+Dir1   Dir2   Dir3   file1  file2  file3  file4
+[root@localhost Lab2]# cp file1 Dir1
+[root@localhost Lab2]# ls
+Dir1   Dir2   Dir3   file1  file2  file3  file4
+[root@localhost Lab2]# ls Dir1
+file1
+[root@localhost Lab2]# cp file2 Dir2
+[root@localhost Lab2]# ls Dir2
+file2
+[root@localhost Lab2]# cp file2 Dir1
+[root@localhost Lab2]# ls Dir1
+file1  file2
+[root@localhost Lab2]# rm Dir1/file2
+[root@localhost Lab2]# ls Dir1
+file1
+[root@localhost Lab2]# mv file4 Dir3
+[root@localhost Lab2]# ls
+Dir1   Dir2   Dir3   file1  file2  file3
+[root@localhost Lab2]# ls Dir3
+file4
+[root@localhost Lab2]# mv file3 newfile3
+[root@localhost Lab2]# ls
+Dir1      Dir2      Dir3      file1     file2     newfile3
+[root@localhost Lab2]# mkdir Dir4
+[root@localhost Lab2]# ls
+Dir1      Dir2      Dir3      Dir4      file1     file2     newfile3
+[root@localhost Lab2]# mv Dir4 D4
+[root@localhost Lab2]# mv D4 Dir3
+[root@localhost Lab2]# ls Dir3
+D4     file4
+[root@localhost Lab2]# ls
+Dir1      Dir2      Dir3      file1     file2     newfile3
+[root@localhost Lab2]# cp newfile3 D4/Dir3
+cp: can't create 'D4/Dir3': No such file or directory
+[root@localhost Lab2]# cp newfile3 Dir3/D4
+[root@localhost Lab2]# ls D
+ls: D: No such file or directory
+[root@localhost Lab2]# ls
+Dir1      Dir2      Dir3      file1     file2     newfile3
+[root@localhost Lab2]# ls Dir3/D4
+newfile3
+[root@localhost Lab2]# ls /root
+Lab2     dos      f1       f2       f3       f4       hello.c
+[root@localhost Lab2]# cp /root/f1 Dir3/D4
+[root@localhost Lab2]# ls Dir/D4
+ls: Dir/D4: No such file or directory
+[root@localhost Lab2]# ls Dir3/D4
+f1        newfile3
+[root@localhost Lab2]# mv /root/f2 Dir2
+[root@localhost Lab2]# ls/root
+sh: ls/root: not found
+[root@localhost Lab2]# ls /root
+Lab2     dos      f1       f3       f4       hello.c
+[root@localhost Lab2]# ls Dir2
+f2     file2
+[root@localhost Lab2]# mv D4 Dir3
+[root@localhost Lab2]# ls Dir3
+D4     file4
+[root@localhost Lab2]# ls
+Dir1      Dir2      Dir3      file1     file2     newfile3
+[root@localhost Lab2]# cp newfile3 D4/Dir3
+cp: can't create 'D4/Dir3': No such file or directory
+[root@localhost Lab2]# cp newfile3 Dir3/D4
+[root@localhost Lab2]# ls D
+ls: D: No such file or directory
+[root@localhost Lab2]# ls
+Dir1      Dir2      Dir3      file1     file2     newfile3
+[root@localhost Lab2]# ls Dir3/D4
+newfile3
+[root@localhost Lab2]# ls /root
+Lab2     dos      f1       f2       f3       f4       hello.c
+[root@localhost Lab2]# cp /root/f1 Dir3/D4
+[root@localhost Lab2]# ls Dir/D4
+ls: Dir/D4: No such file or directory
+[root@localhost Lab2]# ls Dir3/D4
+f1        newfile3
+[root@localhost Lab2]# mv /root/f2 Dir2
+[root@localhost Lab2]# ls/root
+sh: ls/root: not found
+[root@localhost Lab2]# ls /root
+Lab2     dos      f1       f3       f4       hello.c
+[root@localhost Lab2]# ls Dir2
+f2     file2
+ 
+[root@localhost ~]# rm f1
+[root@localhost ~]# ls
+Lab2     dos      f2       f3       hello.c
+[root@localhost ~]# mkdir D1 D2 D3
+[root@localhost ~]# ls
+D1       D2       D3       Lab2     dos      f2       f3       hello.c
+[root@localhost ~]# rmdir D1
+[root@localhost ~]# ls
+D2       D3       Lab2     dos      f2       f3       hello.c
+[root@localhost ~]# rm D2
+rm: 'D2' is a directory
+[root@localhost ~]# rmdir Lab2
+rmdir: 'Lab2': Directory not empty
+[root@localhost ~]# ls Lab2
+Dir1      Dir2      Dir3      Lab2      f3        file1     file2     newfile3
+[root@localhost ~]# rm Lab2/*
+rm: 'Lab2/Dir1' is a directory
+rm: 'Lab2/Dir2' is a directory
+rm: 'Lab2/Dir3' is a directory
+[root@localhost ~]# ls Lab2
+Dir1  Dir2  Dir3
+[root@localhost ~]# rmdir Lab2/*
+rmdir: 'Lab2/Dir1': Directory not empty
+rmdir: 'Lab2/Dir2': Directory not empty
+rmdir: 'Lab2/Dir3': Directory not empty
+[root@localhost ~]# cd Lab2
+[root@localhost Lab2]# ls
+Dir1  Dir2  Dir3
+[root@localhost Lab2]# ls Dir1
+file1
+[root@localhost Lab2]# rm Dir1/*
+[root@localhost Lab2]# rm Dir2/*
+[root@localhost Lab2]# rm Dir3/*
+rm: 'Dir3/D4' is a directory
+[root@localhost Lab2]# cd Dir3
+[root@localhost Dir3]# pwd
+/root/Lab2/Dir3
+[root@localhost Dir3]# ls
+D4
+[root@localhost Dir3]# rm D4/*
+[root@localhost Dir3]# rmdir D4
+[root@localhost Dir3]# cd ..
+[root@localhost Lab2]# pwd
+/root/Lab2
+[root@localhost Lab2]# rmdir *
+[root@localhost Lab2]# ls
+[root@localhost Lab2]# cd ..
+[root@localhost ~]# pwd
+/root
+[root@localhost ~]# ls
+D2       D3       Lab2     dos      f2       f3       hello.c
+[root@localhost ~]# rmdir Lab2
+[root@localhost ~]# ls
+D2       D3       dos      f2       f3       hello.c

@@ -1,0 +1,20 @@
+SET-A
+
+Write a shell program which will do the below tasks.
+a) Change the workspace to OSMID1. 
+b)Copy osblock file to OSMID2 from OSMID1.
+c)Cut osnew2 to OSMID3 from OSMID1, if source exists.
+ 
+
+If all the command is run successfully then print “Successfully done…..” otherwise “Unsuccessful attempt…..” All must be commanded by shell programming.
+
+
+SET-B
+
+Write a shell program which will do the below tasks.
+a) Change the workspace to OSFINAL. 
+b)Rename OS1 to OS2 if OS1 is a existing directory.
+c)Show the list of present work directory. 
+
+
+If all the command is run successfully then print “Successfully done…..” otherwise “Unsuccessful attempt…..” All must be commanded by shell programming.
